@@ -5,13 +5,8 @@
 This code repository implements a sandbox Java banking application with REST API with following basic use cases: 
 
   ● Sending money between two predefined accounts with a positive starting balance
+  
   ● Requesting account balance and list of transactions
-
-![endpoints.png](media/endpoints.png)
-
-![transactionRequest.png](media/transactionRequest.png)
-
-![accontStatement.png](media/accontStatement.png)
 
 ### Requirements:
 
@@ -33,12 +28,20 @@ Step 2:
 
 [http://localhost:8284/swagger-ui.html](http://localhost:8284/swagger-ui.html)
 
+### Examples of Api Usage
+
+![endpoints.png](media/endpoints.png)
+
+![transactionRequest.png](media/transactionRequest.png)
+
+![accontStatement.png](media/accontStatement.png)
+
 ### Possible Next Steps/Things to improve:
 
 - Allow for transactions/operations upto only 2 decimal places for account balance and transaction amounts
 - Optimise service methods for minimising database connections
 
-### Snapshots
+### Error Snapshots
 
 ![error1.png](media/error1.png)
 
