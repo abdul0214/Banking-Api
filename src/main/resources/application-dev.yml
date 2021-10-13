@@ -1,0 +1,43 @@
+#server:
+#  port: 8284
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:15432/moneytransfer
+#    username: moneytransfer
+#    password: moneytransfer
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        format_sql: true
+#    hibernate:
+#      ddl-auto: validate
+#  sql:
+#    init:
+#      mode: always
+#
+#
+
+server:
+  port: 8284
+spring:
+  application:
+    name: flywayapp
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:15432/moneytransfer
+    password: moneytransfer
+    username: moneytransfer
+    testOnBorrow: true
+    testWhileIdle: true
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 30000
+    validationQuery: SELECT 1
+    max-active: 15
+    max-idle: 10
+    max-wait: 8000
+flyway:
+  url: jdbc:postgresql://localhost:15432/postgresql
+  schemas: public
+  user: moneytransfer
+  password: moneytransfer
